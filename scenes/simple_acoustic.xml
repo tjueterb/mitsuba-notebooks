@@ -1,0 +1,57 @@
+<scene version='3.0.0'>
+    <!-- <default name="spp" value="256"/> -->
+    <!-- <default name="res" value="256"/> -->
+
+
+    <integrator type='acousticpath'>
+        <integer name="max_depth" value="-1"/>
+        <integer name="rr_depth" value="123456"/>
+    </integrator>
+
+    <sensor type="microphone" id="sensor">
+        <transform name="to_world">
+            <lookat target="0.0, 0.0, 1.25"
+                    origin="0.0, -12.0, 5.0"
+                    up    ="0.0, 0.0, 1.0"/>
+        </transform>
+        <film type="tape">
+            <spectrum name="constant acoustic spectrum" value="0.8"/>
+            <!-- <spectrum name="band1" value="125:1, 250:1"/> -->
+            <!-- <spectrum name="band2" value="250:1, 500:1"/> -->
+        </film>
+    </sensor>
+
+    <!-- <spectrum type="acoustic" name="explicit acoustic spectrum">
+        <string name="frequencies" value="100, 2000, 4000, 8000"/>
+        <string name="values"      value="0.1, 0.2, 0.4, 0.8"/>
+        <float name="speed_of_sound" value="450"/>
+    </spectrum>
+
+    <spectrum name="implicit acoustic spectrum" value="125:0.1, 250:0.2, 500:0.4, 1000:0.8"/>  -->
+
+    <spectrum name="constant acoustic spectrum" value="0.8"/>
+
+    <!-- <shape type="ply" id="teapot">
+        <string name="filename" value="meshes/teapot.ply"/>
+        <bsdf type="diffuse">
+            <spectrum type="acoustic" name="reflectance">
+                <string name="wavelengths" value="125, 250, 500, 1000"/>
+                <string name="values" value="0.1, 0.2, 0.4, 0.8"/>
+            </spectrum>
+        </bsdf>
+    </shape> -->
+
+    <!-- <emitter type="point" id="source1">
+        <point name="position" x="-3" y="-10.0" z="6.0"/>
+        <spectrum name='sound power' value="100"/>
+        </spectrum>
+    </emitter>
+
+    <emitter type="point" id="source2">
+        <point name="position" x="3" y="-10.0" z="-2.0"/>
+        <spectrum type="irregular" name='sound power'>
+            <string name="frequencies" value="125, 250, 500, 1000"/>
+            <string name="values" value="0.444, 0.555, 0.666, 0.777"/>
+        </spectrum>
+    </emitter> -->
+</scene>
