@@ -1,0 +1,37 @@
+## Material/Surface information file "mat_RockFonSonarG"
+
+Author: 					Lukas Aspöck / las@akustik.rwth-aachen.de
+Date:						2019/11/21
+
+Notes:						This file contains information about the boundary conditions of the material "mat_RockFonSonarG"
+							All relevant values are given in separate files in the csv-format
+							
+							The data corresponds an infinte surface of absorber sheets (w=600 mm, l=600mm, h=20mm).
+							Edge/diffraction effects (due to limited distances and reflector sizes in scenes RS1 and RS2) have to be modelled (or neglected) by the user
+							Material was provided by the company RockFon (ROCKWOOL)
+							Product details can be found here: http://rwiumbraco-rfn.inforce.dk/media/3231070/de-rockfon-sonar.pdf
+
+## Material information:
+
+Scenes:						RS1, RS2
+Origin of data: 			0°: Impedance tube, ISO 10534-2 between 100 Hz - 4 kHz; estimated/extrapolated for lower and higher frequencies 
+							Others: Angle-dependant intu-measurement (hemi anechoic chamber) between ~300 Hz - 15 kHz; estimated/extrapolated for lower and higher frequencies 						
+Angle of incidence:			0°, 30°, 45°, 60° // [ 0°  = normal incidence, 90° = grazing incidence]
+Data frequency Range:		20 Hz - 20 kHz (31 third octave values, see line 1 in csv file)	
+
+Absorption coefficients:	[x] (see line 2 in csv file)
+Scattering coefficients: 	[x] (see line 3 in csv file) 
+Impedance values:			[ ]
+
+Characteristic depth:		0.005 m
+
+Data files:					/_csv/mat_RockFonSonarG_00deg.csv
+							/_csv/mat_RockFonSonarG_30deg.csv
+							/_csv/mat_RockFonSonarG_45deg.csv
+							/_csv/mat_RockFonSonarG_60deg.csv
+							/_csv/mat_RockFonSonarG_45degIn_32degOut.csv	// for binaural situation (LS02->MP04)
+							
+
+## Additional information:
+
+Processing of measurements:	Edge (diffraction) effects on absorption are neglected / corresponding frequency range is interpolated (100 Hz - 300 Hz) for angle-depedant measurements
